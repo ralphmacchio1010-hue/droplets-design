@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Droplets Design Studio | Architecture · Interior · Landscaping | Pune</title>
+<meta name="description" content="Premium architecture, interior design & landscaping for residential and commercial spaces across Sinhgad Road, Hingne Khurd & Pune. 4.5★ Google Rated. 20+ Projects.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<!-- LOCAL BUSINESS SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "ProfessionalService"],
+  "name": "Droplets Design Studio",
+  "description": "Premium architecture, interior design and landscaping studio serving Pune.",
+  "url": "https://dropletsdesign.in",
+  "telephone": "+91-99999-99999",
+  "email": "hello@dropletsdesign.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sinhgad Road",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "postalCode": "411041",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 18.4669,
+    "longitude": 73.8145
+  },
+  "openingHours": "Mo-Su 09:30-21:30",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "reviewCount": "27"
+  },
+  "priceRange": "₹₹₹",
+  "areaServed": ["Sinhgad Road", "Hingne Khurd", "Savitri Nagar", "Warje", "Katraj", "Dhayari", "Pune"]
+}
+</script>
+
+<style>
+  :root {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F2F2F2;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --accent-blue: #2F80ED;
+    --gradient: linear-gradient(90deg, #FF8A00, #FFC94D, #FF4FA3, #8A3FFC, #2F80ED, #2DD4BF);
+    --shadow-card: 0 4px 32px rgba(0,0,0,0.04);
+    --radius: 2px;
+    --transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Poppins', sans-serif; background: var(--bg-primary); color: var(--text-primary); overflow-x: hidden; }
+
+  /* PRELOADER */
+  /* ── PRELOADER ── */
+  #preloader {
+    position: fixed; inset: 0;
+    z-index: 9999;
+    background: #0a0806;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+  #preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+  #preloader.gone   { display: none; }
+
+  /* Subtle grid background */
+  #preloader::after {
+    content: '';
+    position: absolute; inset: 0; pointer-events: none;
+    opacity: 0.03;
+    background-image:
+      linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: gridDrift 30s linear infinite;
+  }
+
+  /* Warm glow orb behind everything */
+  .pl-glow {
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,100,20,0.18) 0%, transparent 65%);
+    filter: blur(60px);
+    animation: plGlowPulse 4s ease-in-out infinite;
+  }
+  @keyframes plGlowPulse {
+    0%,100% { transform: scale(1);   opacity: 0.7; }
+    50%     { transform: scale(1.2); opacity: 1;   }
+  }
+
+  /* Pendant lights */
+  .pl-pendant {
+    position: absolute;
+    top: 0; width: 1px;
+    height: 0;
+    background: linear-gradient(180deg, transparent, rgba(255,185,70,0.5));
+    transform-origin: top center;
+    animation: plPendantDrop 1.2s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  .pl-pendant::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 50%;
+    transform: translateX(-50%);
+    width: 6px; height: 6px;
+    background: #ffd060;
+    border-radius: 50%;
+    box-shadow:
+      0 0 10px 4px rgba(255,180,50,0.6),
+      0 0 30px 14px rgba(255,150,30,0.2);
+    animation: plBulbPulse 2.5s ease-in-out infinite;
+  }
+  @keyframes plPendantDrop {
+    from { height: 0; }
+    to   { height: 28vh; }
+  }
+  @keyframes plBulbPulse {
+    0%,100% { box-shadow: 0 0 10px 4px rgba(255,180,50,0.6), 0 0 30px 14px rgba(255,150,30,0.2); }
+    50%     { box-shadow: 0 0 16px 7px rgba(255,200,70,0.8), 0 0 50px 24px rgba(255,160,40,0.3); }
+  }
+
+  /* Inner wrapper */
+  .pl-inner {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column;
+    align-items: center; gap: 0;
+  }
+
+  /* Animated ring mark */
+  .pl-mark {
+    width: 60px; height: 60px;
+    position: relative;
+    margin-bottom: 24px;
+    animation: plMarkIn 0.7s 0.3s cubic-bezier(0.22,1,0.36,1) both;
+  }
+  @keyframes plMarkIn {
+    from { opacity: 0; transform: scale(0.4); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  .pl-ring {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .pl-ring:nth-child(1) {
+    inset: 18px;
+    background: var(--gradient);
+    background-size: 300% 100%;
+    animation: plRingGrad 3s 1s linear infinite;
+  }
+  @keyframes plRingGrad {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+  }
+  .pl-ring:nth-child(2) {
+    inset: 9px;
+    border: 1px solid rgba(255,200,80,0.35);
+    animation: plRingIn 0.6s 0.5s cubic-bezier(0.22,1,0.36,1) both, plRing2Pulse 3s 1.1s ease-in-out infinite;
+  }
+  @keyframes plRingIn   { from { opacity:0; transform:scale(0.3); } to { opacity:1; transform:scale(1); } }
+  @keyframes plRing2Pulse {
+    0%,100% { border-color: rgba(255,200,80,0.35); }
+    50%     { border-color: rgba(255,200,80,0.7); }
+  }
+  .pl-ring:nth-child(3) {
+    inset: 0;
+    border: 1px solid rgba(255,255,255,0.07);
+    animation: plRingIn 0.6s 0.7s cubic-bezier(0.22,1,0.36,1) both;
+  }
+
+  /* Studio name */
+  .pl-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(32px, 5vw, 52px);
+    letter-spacing: 0.18em;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    animation: plNameIn 0.8s 0.6s cubic-bezier(0.22,1,0.36,1) both;
+  }
+  @keyframes plNameIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  /* Shimmer sweep */
+  .pl-name::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,255,255,0.35) 45%,
+      rgba(255,255,255,0.55) 50%,
+      rgba(255,255,255,0.35) 55%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    background-position: -200% 0;
+    animation: plShimmer 1.2s 1.4s ease forwards;
+  }
+  @keyframes plShimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* Tagline */
+  .pl-tag {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px; font-weight: 600;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: rgba(255,255,255,0.3);
+    margin-top: 6px;
+    animation: plFadeUp 0.6s 1.0s ease both;
+  }
+
+  /* Progress bar */
+  .pl-bar-wrap {
+    width: 200px; height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin-top: 28px;
+    overflow: hidden;
+    position: relative;
+    animation: plFadeUp 0.5s 1.1s ease both;
+  }
+  .pl-bar {
+    height: 100%; width: 0%;
+    background: var(--gradient);
+    background-size: 400% 100%;
+    animation:
+      plBarFill 2.4s 1.2s cubic-bezier(0.4,0,0.2,1) forwards,
+      plBarShimmer 2.4s 1.2s linear forwards;
+  }
+  @keyframes plBarFill    { to { width: 100%; } }
+  @keyframes plBarShimmer { 0% { background-position: 0% 0; } 100% { background-position: -200% 0; } }
+
+  /* Glowing dot at bar tip */
+  .pl-bar-dot {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    left: 0%; width: 4px; height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 6px 2px rgba(255,255,255,0.7);
+    animation: plDotMove 2.4s 1.2s cubic-bezier(0.4,0,0.2,1) forwards;
+  }
+  @keyframes plDotMove { to { left: calc(100% - 4px); } }
+
+  /* Percent counter */
+  .pl-percent {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.22);
+    margin-top: 10px;
+    animation: plFadeUp 0.5s 1.2s ease both;
+  }
+
+  /* Horizontal arch lines top/bottom */
+  .pl-hline {
+    position: absolute;
+    left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%, rgba(255,255,255,0.04) 30%,
+      rgba(255,255,255,0.06) 50%,
+      rgba(255,255,255,0.04) 70%, transparent 100%
+    );
+    transform: scaleX(0); transform-origin: center;
+    animation: plLineGrow 1s ease forwards;
+  }
+  @keyframes plLineGrow { to { transform: scaleX(1); } }
+
+  @keyframes plFadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 20px 5%; display: flex; align-items: center; justify-content: space-between;
+    transition: background 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+  }
+  nav.scrolled { background: rgba(255,255,255,0.96); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(0,0,0,0.06); padding: 14px 5%; }
+  .nav-logo { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 20px; color: #fff; letter-spacing: 0.06em; text-decoration: none; transition: color 0.4s; }
+  nav.scrolled .nav-logo { color: var(--text-primary); }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.3s; position: relative; }
+  .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--accent-blue); transition: width 0.3s ease; }
+  .nav-links a:hover::after { width: 100%; }
+  nav.scrolled .nav-links a { color: var(--text-secondary); }
+  .nav-links a:hover { color: var(--text-primary); }
+  .nav-cta { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #111 !important; background: #fff; padding: 10px 22px; border-radius: var(--radius); text-decoration: none; transition: background 0.3s, color 0.3s, transform 0.2s; }
+  nav.scrolled .nav-cta { background: var(--text-primary); color: #fff !important; }
+  .nav-cta:hover { transform: translateY(-1px); }
+  @media (max-width: 768px) { .nav-links { display: none; } nav { padding: 18px 5%; } }
+
+  /* HERO */
+  .hero {
+    height: 100vh; min-height: 680px;
+    position: relative;
+    display: flex; align-items: center;
+    padding: 0 6% 0;
+    overflow: hidden;
+    gap: 0;
+  }
+
+  /* ── BACKGROUND ── */
+  .hero-bg {
+    position: absolute; inset: 0; overflow: hidden;
+    background: #080604;
+  }
+  /* Deep layered atmosphere */
+  .hero-bg::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 90% 70% at 70% 30%, rgba(160,80,20,0.22) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 80% at 90% 60%, rgba(100,45,8,0.18) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 60% at 10% 80%, rgba(25,50,110,0.10) 0%, transparent 50%),
+      linear-gradient(155deg, #160a02 0%, #0a0704 40%, #06060e 75%, #040406 100%);
+    animation: atmosphereShift 12s ease-in-out infinite alternate;
+  }
+  @keyframes atmosphereShift {
+    0%   { opacity: 0.8; }
+    100% { opacity: 1; }
+  }
+  /* Animated architectural grid */
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    opacity: 0.035;
+    background-image:
+      linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: gridDrift 30s linear infinite;
+  }
+  @keyframes gridDrift { 0% { background-position: 0 0; } 100% { background-position: 80px 80px; } }
+
+  /* ── CINEMATIC SCENE LAYER ── */
+  .hero-scene { position: absolute; inset: 0; }
+
+  /* Slow scanning light beam — like a projector sweeping the room */
+  .scene-beam {
+    position: absolute;
+    top: 0; left: 55%;
+    width: 2px; height: 100%;
+    background: linear-gradient(180deg, transparent 0%, rgba(255,185,70,0.12) 30%, rgba(255,160,50,0.06) 70%, transparent 100%);
+    filter: blur(20px);
+    animation: beamScan 18s ease-in-out infinite;
+    transform-origin: top;
+  }
+  @keyframes beamScan {
+    0%,100% { left: 50%; opacity: 0.5; }
+    50%     { left: 75%; opacity: 1; }
+  }
+
+  /* Primary warm pendant */
+  .scene-pendant {
+    position: absolute;
+    top: -2px; left: 68%;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(180deg, rgba(255,190,80,0.0) 0%, rgba(255,190,80,0.7) 100%);
+    animation: pendantDrop 1.2s 0.2s cubic-bezier(0.22,1,0.36,1) forwards, pendantSway 7s 1.4s ease-in-out infinite;
+    transform-origin: top center;
+  }
+  @keyframes pendantDrop { to { height: 28%; } }
+  @keyframes pendantSway {
+    0%,100% { transform: rotate(0deg); }
+    25%     { transform: rotate(1.8deg); }
+    75%     { transform: rotate(-1.8deg); }
+  }
+  .scene-pendant::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 50%;
+    transform: translateX(-50%);
+    width: 10px; height: 10px;
+    background: radial-gradient(circle, #ffe080 0%, #ffb830 60%, transparent 100%);
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 2px rgba(255,200,80,0.3),
+      0 0 20px 8px rgba(255,170,50,0.5),
+      0 0 60px 30px rgba(255,140,30,0.2),
+      0 0 120px 60px rgba(255,120,20,0.08);
+    animation: bulbBreath 3s 2.6s ease-in-out infinite;
+  }
+  @keyframes bulbBreath {
+    0%,100% { box-shadow: 0 0 0 2px rgba(255,200,80,0.3), 0 0 20px 8px rgba(255,170,50,0.5), 0 0 60px 30px rgba(255,140,30,0.2), 0 0 120px 60px rgba(255,120,20,0.08); }
+    50%     { box-shadow: 0 0 0 3px rgba(255,210,90,0.4), 0 0 28px 12px rgba(255,185,60,0.65), 0 0 80px 40px rgba(255,150,40,0.28), 0 0 160px 80px rgba(255,130,25,0.12); }
+  }
+  /* Light cone below pendant */
+  .scene-cone {
+    position: absolute;
+    top: 28%; left: 68%;
+    transform: translateX(-50%);
+    width: 0; height: 0;
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-top: 220px solid rgba(255,165,50,0.04);
+    filter: blur(16px);
+    animation: conePulse 3s 2.6s ease-in-out infinite;
+  }
+  @keyframes conePulse {
+    0%,100% { opacity: 0.7; transform: translateX(-50%) scaleX(1); }
+    50%     { opacity: 1;   transform: translateX(-50%) scaleX(1.1); }
+  }
+
+  /* Second pendant — further right, delayed */
+  .scene-pendant-2 {
+    position: absolute;
+    top: -2px; left: 88%;
+    width: 1px; height: 0;
+    background: linear-gradient(180deg, rgba(255,200,90,0.0), rgba(255,200,90,0.5));
+    animation: pendantDrop2 1s 0.5s cubic-bezier(0.22,1,0.36,1) forwards, pendantSway 9s 1.5s ease-in-out infinite reverse;
+    transform-origin: top center;
+  }
+  @keyframes pendantDrop2 { to { height: 20%; } }
+  .scene-pendant-2::after {
+    content: '';
+    position: absolute; bottom: -3px; left: 50%;
+    transform: translateX(-50%);
+    width: 7px; height: 7px;
+    background: radial-gradient(circle, #ffe080 0%, #ffb830 60%, transparent 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 16px 6px rgba(255,170,50,0.4), 0 0 50px 24px rgba(255,140,30,0.15);
+    animation: bulbBreath 4s 3s ease-in-out infinite;
+  }
+
+  /* Architectural horizontal lines — like wall sections */
+  .scene-hline {
+    position: absolute;
+    left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 20%, rgba(255,255,255,0.06) 55%, transparent 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: hlineReveal 1.5s ease forwards;
+  }
+  @keyframes hlineReveal { to { transform: scaleX(1); } }
+
+  /* Vertical wall rule lines */
+  .scene-vline {
+    position: absolute;
+    top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.04) 20%, rgba(255,255,255,0.05) 60%, transparent 100%);
+    transform: scaleY(0);
+    transform-origin: top;
+    animation: vlineReveal 1.2s ease forwards;
+  }
+  @keyframes vlineReveal { to { transform: scaleY(1); } }
+
+  /* Floor with perspective grid */
+  .scene-floor {
+    position: absolute;
+    bottom: 0; left: 0; right: 0; height: 30%;
+    background: linear-gradient(180deg, transparent 0%, rgba(8,5,2,0.98) 100%);
+    border-top: 1px solid rgba(255,255,255,0.03);
+  }
+  .scene-floor::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    transform: perspective(300px) rotateX(60deg) translateY(-10%);
+    transform-origin: top center;
+    opacity: 0;
+    animation: floorReveal 1s 1.8s ease forwards;
+  }
+  @keyframes floorReveal { to { opacity: 1; } }
+
+  /* Warm wall glow right side */
+  .scene-wall-glow {
+    position: absolute;
+    top: 0; right: 0; bottom: 30%;
+    width: 45%;
+    background: linear-gradient(270deg, rgba(80,35,8,0.18) 0%, rgba(50,22,5,0.08) 50%, transparent 100%);
+    animation: wallPulse 8s ease-in-out infinite;
+  }
+  @keyframes wallPulse {
+    0%,100% { opacity: 0.7; }
+    50%     { opacity: 1; }
+  }
+
+  /* Wood slat texture on right wall */
+  .scene-slats {
+    position: absolute;
+    top: 0; right: 0; bottom: 30%;
+    width: 42%;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px,
+      transparent 1px, transparent 26px
+    );
+    opacity: 0;
+    animation: slatsReveal 1s 1.6s ease forwards;
+  }
+  @keyframes slatsReveal { to { opacity: 1; } }
+
+  /* Floating ambient orbs */
+  .scene-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    animation: orbFloat ease-in-out infinite;
+  }
+  @keyframes orbFloat {
+    0%,100% { transform: translate(0, 0) scale(1); opacity: var(--oa, 0.6); }
+    50%     { transform: translate(var(--dx, 8px), var(--dy, -8px)) scale(1.08); opacity: calc(var(--oa, 0.6) + 0.2); }
+  }
+
+  /* ── HERO LEFT (TEXT) ── */
+  .hero-left {
+    position: relative; z-index: 2;
+    flex: 0 0 52%; max-width: 52%;
+    padding-top: 0;
+    opacity: 1;
+  }
+  @media (max-width: 900px) { .hero-left { flex: 0 0 100%; max-width: 100%; } }
+
+  /* Eyebrow — slides in from left */
+  .hero-eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 14px;
+    opacity: 0; transform: translateX(-20px);
+  }
+  .hero-ready .hero-eyebrow {
+    animation: slideInLeft 0.8s 0.1s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  @keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; flex-shrink: 0;
+    width: 0; height: 1px;
+    background: var(--gradient);
+  }
+  .hero-ready .hero-eyebrow::before {
+    animation: eyebrowLine 0.8s 0.1s ease forwards;
+  }
+  @keyframes eyebrowLine { to { width: 36px; } }
+
+  /* Headline — each line staggers in */
+  .hero-headline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: clamp(34px, 4.8vw, 66px);
+    line-height: 1.06;
+    color: #fff;
+    letter-spacing: -0.025em;
+    margin-bottom: 24px;
+  }
+  .hero-headline .line {
+    display: block; overflow: hidden;
+  }
+  .hero-headline .line-inner {
+    display: block;
+    transform: translateY(100%);
+    animation: lineReveal 0.9s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  .hero-headline .line:nth-child(1) .line-inner { animation-play-state: paused; }
+  .hero-headline .line:nth-child(2) .line-inner { animation-play-state: paused; }
+  .hero-headline .line:nth-child(3) .line-inner { animation-play-state: paused; }
+  .hero-ready .hero-headline .line:nth-child(1) .line-inner { animation-delay: 0.25s; animation-play-state: running; }
+  .hero-ready .hero-headline .line:nth-child(2) .line-inner { animation-delay: 0.40s; animation-play-state: running; }
+  .hero-ready .hero-headline .line:nth-child(3) .line-inner { animation-delay: 0.55s; animation-play-state: running; }
+  .hero-ready .hero-headline .line:nth-child(4) .line-inner { animation-delay: 0.70s; animation-play-state: running; }
+  .hero-headline .line:nth-child(4) .line-inner { animation-play-state: paused; }
+  @keyframes lineReveal { to { transform: translateY(0); } }
+
+  /* Gradient word */
+  .hero-headline .grad-word {
+    display: inline;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 300% 100%;
+    animation: gradientShift 5s linear infinite;
+  }
+  @keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: -200% 50%; }
+  }
+
+  /* Sub text */
+  .hero-sub {
+    font-size: 14px; line-height: 1.75;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 36px; max-width: 420px;
+    opacity: 0;
+  }
+  .hero-ready .hero-sub { animation: fadeUp 0.8s 0.7s ease forwards; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Actions */
+  .hero-actions {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    opacity: 0;
+  }
+  .hero-ready .hero-actions { animation: fadeUp 0.8s 0.9s ease forwards; }
+
+  /* Stat chips below CTAs */
+  .hero-chips {
+    display: flex; gap: 10px; flex-wrap: wrap;
+    margin-top: 28px;
+    opacity: 0;
+  }
+  .hero-ready .hero-chips { animation: fadeUp 0.8s 1.1s ease forwards; }
+  .hero-chip {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 6px 12px;
+    display: flex; align-items: center; gap: 6px;
+    transition: border-color 0.3s, color 0.3s;
+  }
+  .hero-chip:hover { border-color: rgba(255,200,80,0.3); color: rgba(255,200,80,0.7); }
+  .hero-chip-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    animation: chipDotPulse 2s ease-in-out infinite;
+  }
+  @keyframes chipDotPulse { 0%,100% { opacity: 0.5; transform: scale(1); } 50% { opacity: 1; transform: scale(1.3); } }
+
+  /* ── HERO RIGHT VISUAL ── */
+  .hero-visual {
+    position: relative; z-index: 2;
+    flex: 0 0 42%; max-width: 42%;
+    aspect-ratio: 0.88;
+    opacity: 0;
+    animation: visualReveal 1.2s 2.2s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  @keyframes visualReveal { to { opacity: 1; } }
+  .hero-ready .hero-visual { animation: visualReveal 1.2s 0.4s cubic-bezier(0.22,1,0.36,1) forwards; }
+  @media (max-width: 900px) { .hero-visual { display: none; } }
+
+  /* Outer frame */
+  .hv-frame {
+    width: 100%; height: 100%;
+    position: relative;
+    overflow: hidden;
+    background: rgba(10,6,2,0.7);
+    backdrop-filter: blur(4px);
+  }
+  /* Animated border draw */
+  .hv-frame::before {
+    content: '';
+    position: absolute; inset: 0;
+    border: 1px solid transparent;
+    animation: borderDraw 1.5s 2.2s ease forwards;
+    background: linear-gradient(#0a0602, #0a0602) padding-box,
+                linear-gradient(135deg, rgba(255,200,80,0.3), rgba(255,255,255,0.06), rgba(47,128,237,0.2)) border-box;
+  }
+  @keyframes borderDraw { from { opacity: 0; } to { opacity: 1; } }
+
+  /* Corner brackets */
+  .hv-corner {
+    position: absolute; width: 16px; height: 16px;
+    border-color: rgba(255,255,255,0.25); border-style: solid;
+    opacity: 0; animation: cornerReveal 0.5s ease forwards;
+    z-index: 20;
+  }
+  .hv-corner:nth-child(1) { top: 10px; left: 10px; border-width: 1px 0 0 1px; animation-delay: 2.5s; }
+  .hv-corner:nth-child(2) { top: 10px; right: 10px; border-width: 1px 1px 0 0; animation-delay: 2.65s; }
+  .hv-corner:nth-child(3) { bottom: 10px; left: 10px; border-width: 0 0 1px 1px; animation-delay: 2.8s; }
+  .hv-corner:nth-child(4) { bottom: 10px; right: 10px; border-width: 0 1px 1px 0; animation-delay: 2.95s; }
+  @keyframes cornerReveal { to { opacity: 1; } }
+
+  /* Room container */
+  .hv-room { position: absolute; inset: 0; }
+
+  /* Ceiling */
+  .hv-ceiling {
+    position: absolute; top: 0; left: 0; right: 0; height: 16%;
+    background: linear-gradient(180deg, rgba(6,4,2,0.9) 0%, transparent 100%);
+  }
+
+  /* Wood slat wall */
+  .hv-wall-right {
+    position: absolute; top: 0; right: 0; bottom: 32%; width: 40%;
+    background: linear-gradient(270deg, rgba(55,28,7,0.22) 0%, transparent 100%);
+  }
+  .hv-wall-right::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.022) 0px, rgba(255,255,255,0.022) 1px,
+      transparent 1px, transparent 24px
+    );
+  }
+
+  /* Floor with perspective */
+  .hv-floor {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 32%;
+    background: linear-gradient(180deg, rgba(12,7,2,0) 0%, rgba(6,4,1,0.97) 100%);
+    border-top: 1px solid rgba(255,255,255,0.035);
+  }
+  .hv-floor::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+    transform: perspective(250px) rotateX(58deg);
+    transform-origin: top center;
+  }
+
+  /* Pendant inside visual frame */
+  .hv-pendant {
+    position: absolute; top: 0; left: 63%;
+    width: 1px;
+    height: 0;
+    background: linear-gradient(180deg, rgba(255,190,80,0.0), rgba(255,190,80,0.8));
+    transform-origin: top center;
+    animation: hvPendantDrop 1s 2.8s cubic-bezier(0.22,1,0.36,1) forwards,
+               pendantSway 7s 3.8s ease-in-out infinite;
+  }
+  @keyframes hvPendantDrop { to { height: 26%; } }
+  .hv-pendant::after {
+    content: '';
+    position: absolute; bottom: -3px; left: 50%;
+    transform: translateX(-50%);
+    width: 8px; height: 8px;
+    background: #ffe070;
+    border-radius: 50%;
+    box-shadow: 0 0 14px 5px rgba(255,175,50,0.6), 0 0 50px 25px rgba(255,145,30,0.2);
+    animation: bulbBreath 3s 3.8s ease-in-out infinite;
+  }
+
+  /* Pendant 2 inside frame */
+  .hv-pendant-2 {
+    position: absolute; top: 0; left: 32%;
+    width: 1px; height: 0;
+    background: linear-gradient(180deg, rgba(255,200,90,0), rgba(255,200,90,0.5));
+    transform-origin: top center;
+    animation: hvPendantDrop2 0.9s 3.1s cubic-bezier(0.22,1,0.36,1) forwards,
+               pendantSway 9s 4s ease-in-out infinite reverse;
+  }
+  @keyframes hvPendantDrop2 { to { height: 18%; } }
+  .hv-pendant-2::after {
+    content: '';
+    position: absolute; bottom: -2px; left: 50%;
+    transform: translateX(-50%);
+    width: 6px; height: 6px;
+    background: #ffd860;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 4px rgba(255,170,50,0.4), 0 0 36px 18px rgba(255,140,30,0.14);
+    animation: bulbBreath 4.5s 4s ease-in-out infinite;
+  }
+
+  /* Light cone inside frame */
+  .hv-light-cone {
+    position: absolute; top: 26%; left: 63%;
+    transform: translateX(-50%);
+    width: 0; height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-top: 180px solid rgba(255,165,50,0.045);
+    filter: blur(12px);
+    animation: conePulse 3s 3.8s ease-in-out infinite;
+    opacity: 0;
+  }
+  @keyframes hvConeIn { to { opacity: 1; } }
+
+  /* Sofa silhouette */
+  .hv-sofa {
+    position: absolute; bottom: 32%; left: 6%; width: 44%; height: 9%;
+    background: rgba(75,40,12,0.45);
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .hv-sofa::before {
+    content: '';
+    position: absolute; bottom: 100%; left: 0; right: 0; height: 52%;
+    background: rgba(85,46,13,0.32);
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+
+  /* Floating annotation tags */
+  .hv-tag {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255,255,255,0.38);
+    border: 1px solid rgba(255,255,255,0.07);
+    padding: 4px 9px;
+    white-space: nowrap;
+    opacity: 0;
+    animation: tagIn 0.6s ease forwards, tagFloat 5s ease-in-out infinite;
+  }
+  @keyframes tagIn { to { opacity: 1; } }
+
+  /* Gradient accent lines */
+  .hv-accent-line {
+    position: absolute; height: 1px;
+    background: var(--gradient);
+    opacity: 0;
+    transform: scaleX(0); transform-origin: left;
+    animation: hLineIn 0.8s ease forwards;
+  }
+  @keyframes hLineIn { to { transform: scaleX(1); opacity: 0.45; } }
+
+  /* Blueprint circles */
+  .hv-circle {
+    position: absolute; border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.055);
+    opacity: 0;
+    animation: circleIn 0.6s ease forwards, rotateSlow linear infinite;
+  }
+  .hv-circle::before {
+    content: ''; position: absolute; inset: 8px;
+    border-radius: 50%;
+    border: 1px dashed rgba(255,255,255,0.03);
+  }
+  @keyframes circleIn { to { opacity: 1; } }
+  @keyframes rotateSlow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+  /* Scanning line — like a render progress bar */
+  .hv-scan {
+    position: absolute; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,200,80,0.4), rgba(47,128,237,0.3), transparent);
+    animation: scanDown 4s 3s ease-in-out infinite;
+    opacity: 0;
+  }
+  @keyframes scanDown {
+    0%   { top: 0%; opacity: 0; }
+    5%   { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+  }
+
+  /* Render progress label */
+  .hv-render-label {
+    position: absolute; bottom: 14px; left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.1);
+    white-space: nowrap;
+    opacity: 0;
+    animation: fadeUp 0.8s 3.5s ease forwards;
+  }
+
+  /* Dimension annotation */
+  .hv-dim {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7px; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.16);
+    opacity: 0;
+    animation: tagIn 0.5s ease forwards, tagFloat 7s ease-in-out infinite;
+  }
+
+  /* Scroll indicator */
+  .scroll-indicator {
+    position: absolute; bottom: 32px; left: 6%;
+    display: flex; align-items: center; gap: 12px;
+    opacity: 0;
+    cursor: pointer; z-index: 2;
+  }
+  .hero-ready .scroll-indicator { animation: fadeUp 0.8s 1.4s ease forwards; }
+  .scroll-indicator span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(255,255,255,0.28);
+  }
+  .scroll-line {
+    width: 48px; height: 1px;
+    background: rgba(255,255,255,0.1);
+    position: relative; overflow: hidden;
+  }
+  .scroll-line::after {
+    content: ''; position: absolute; top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: var(--gradient);
+    animation: scrollAnim 2s 3.4s ease infinite;
+  }
+  @keyframes scrollAnim { 0% { left: -100%; } 100% { left: 100%; } }
+
+  /* BUTTONS */
+  .btn-primary { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 16px 32px; border-radius: var(--radius); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; position: relative; overflow: hidden; background: #fff; color: #111; transition: transform 0.3s, box-shadow 0.3s, color 0.3s; cursor: pointer; border: none; }
+  .btn-primary::before { content: ''; position: absolute; inset: 0; background: var(--gradient); opacity: 0; transition: opacity 0.4s; }
+  .btn-primary:hover::before { opacity: 1; }
+  .btn-primary:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+  .btn-primary span { position: relative; z-index: 1; }
+  .btn-secondary { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 16px 32px; border-radius: var(--radius); text-decoration: none; color: rgba(255,255,255,0.8); border: 1px solid rgba(255,255,255,0.2); transition: border-color 0.3s, color 0.3s, transform 0.3s; cursor: pointer; background: transparent; }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.6); color: #fff; transform: translateY(-2px); }
+
+  /* TRUST BAR */
+  .trust-bar { background: var(--text-primary); padding: 20px 5%; display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+  .trust-item { display: flex; align-items: center; gap: 10px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); white-space: nowrap; }
+  .trust-item .trust-val { color: #fff; font-size: 15px; font-weight: 900; }
+  .trust-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.1); }
+  .stars { color: #FFC94D; letter-spacing: 2px; }
+
+  /* SECTIONS */
+  section { padding: 100px 5%; }
+  .section-alt { background: var(--bg-secondary); }
+  .section-label { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+  .section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gradient); }
+  .section-headline { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(28px, 4vw, 52px); line-height: 1.1; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 20px; }
+  .section-sub { font-size: 15px; line-height: 1.7; color: var(--text-secondary); max-width: 520px; margin-bottom: 60px; }
+  .grad-text { background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; gap: 40px; } }
+
+  /* SERVICES — full-width stacked layout, no blank space */
+  .services-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 48px; }
+  @media (max-width: 768px) { .services-intro { grid-template-columns: 1fr; gap: 24px; margin-bottom: 32px; } }
+  .services-intro .section-sub { margin-bottom: 0; }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  @media (max-width: 900px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .services-grid { grid-template-columns: 1fr; } }
+  .service-card { background: var(--bg-primary); padding: 48px 36px; position: relative; overflow: hidden; cursor: pointer; transition: transform 0.4s var(--transition); }
+  .service-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--gradient); transform: scaleX(0); transform-origin: left; transition: transform 0.4s var(--transition); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { transform: translateY(-4px); }
+  .service-number { font-family: 'Montserrat', sans-serif; font-size: 56px; font-weight: 900; color: rgba(17,17,17,0.04); line-height: 1; margin-bottom: 24px; transition: color 0.4s; }
+  .service-card:hover .service-number { color: rgba(17,17,17,0.08); }
+  .service-icon { font-size: 32px; margin-bottom: 20px; display: block; transition: transform 0.4s var(--transition); }
+  .service-card:hover .service-icon { transform: scale(1.1) rotate(-5deg); }
+  .service-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; color: var(--text-primary); margin-bottom: 12px; }
+  .service-desc { font-size: 14px; line-height: 1.7; color: var(--text-secondary); margin-bottom: 24px; }
+  .service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 10px; background: var(--bg-secondary); color: var(--text-secondary); border-radius: var(--radius); border: 1px solid rgba(0,0,0,0.06); transition: background 0.3s, color 0.3s; }
+  .service-card:hover .tag { background: var(--text-primary); color: #fff; }
+
+  /* STATS */
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; margin-top: 60px; }
+  @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+  .stat-block { background: var(--bg-primary); padding: 36px 24px; text-align: center; border-bottom: 2px solid transparent; transition: border-color 0.3s; }
+  .stat-block:hover { border-color: #FF8A00; }
+  .stat-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(36px, 4vw, 52px); letter-spacing: -0.03em; color: var(--text-primary); line-height: 1; margin-bottom: 8px; }
+  .stat-label { font-size: 12px; color: var(--text-secondary); letter-spacing: 0.05em; }
+
+  /* RENDER SCENE — used in portfolio cards */
+  .render-scene { position: absolute; inset: 0; overflow: hidden; transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94); }
+  .render-floor { position: absolute; bottom: 0; left: 0; right: 0; height: 35%; border-top: 1px solid rgba(255,255,255,0.05); }
+  .render-ceiling { position: absolute; top: 0; left: 0; right: 0; height: 15%; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .render-window { position: absolute; top: 20%; right: 15%; width: 30%; height: 50%; background: linear-gradient(180deg, rgba(255,200,100,0.3) 0%, rgba(255,150,50,0.2) 100%); border: 1px solid rgba(255,255,255,0.15); }
+  .render-light { position: absolute; top: 15%; left: 50%; transform: translateX(-50%); width: 1px; height: 100px; background: linear-gradient(180deg, transparent 0%, rgba(255,200,100,0.4) 100%); }
+  .render-light::before { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: radial-gradient(circle, rgba(255,200,100,0.2) 0%, transparent 70%); }
+  .render-sofa { position: absolute; bottom: 35%; left: 10%; width: 50%; height: 15%; background: rgba(255,255,255,0.06); border-radius: 2px 2px 0 0; border-top: 1px solid rgba(255,255,255,0.1); }
+
+  /* PORTFOLIO */
+  .portfolio-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: auto; gap: 4px; }
+  .portfolio-item { position: relative; overflow: hidden; cursor: pointer; background: #1a1a1a; }
+  .portfolio-item:nth-child(1) { grid-column: span 7; grid-row: span 2; min-height: 480px; }
+  .portfolio-item:nth-child(2) { grid-column: span 5; min-height: 232px; }
+  .portfolio-item:nth-child(3) { grid-column: span 5; min-height: 244px; }
+  .portfolio-item:nth-child(4) { grid-column: span 4; min-height: 280px; }
+  .portfolio-item:nth-child(5) { grid-column: span 4; min-height: 280px; }
+  .portfolio-item:nth-child(6) { grid-column: span 4; min-height: 280px; }
+  @media (max-width: 768px) { .portfolio-grid { grid-template-columns: 1fr 1fr; } .portfolio-item:nth-child(n) { grid-column: span 1; grid-row: span 1; min-height: 200px; } .portfolio-item:nth-child(1) { grid-column: span 2; } }
+  .room-vis { position: absolute; inset: 0; transition: transform 0.7s var(--transition); }
+  .portfolio-item:hover .room-vis { transform: scale(1.04); }
+  .portfolio-item:hover .render-scene { transform: scale(1.04); }
+  .portfolio-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.6); opacity: 0; transition: opacity 0.4s ease; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; }
+  .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+  .portfolio-project { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; color: #fff; margin-bottom: 4px; }
+  .portfolio-meta { font-size: 12px; color: rgba(255,255,255,0.55); letter-spacing: 0.05em; }
+  .portfolio-type { position: absolute; top: 16px; left: 16px; font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.15); padding: 4px 8px; border-radius: 1px; }
+
+  /* PROCESS */
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; counter-reset: process-counter; }
+  @media (max-width: 768px) { .process-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .process-grid { grid-template-columns: 1fr; } }
+  .process-step { padding: 40px 32px; background: var(--bg-primary); position: relative; counter-increment: process-counter; transition: background 0.3s; }
+  .process-step::before { content: counter(process-counter, decimal-leading-zero); font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 11px; letter-spacing: 0.1em; color: rgba(17,17,17,0.2); margin-bottom: 20px; display: block; }
+  .process-step:hover { background: var(--text-primary); }
+  .process-step:hover .process-title, .process-step:hover .process-desc { color: rgba(255,255,255,0.9); }
+  .process-step:hover::before { color: rgba(255,255,255,0.2); }
+  .process-icon { font-size: 28px; margin-bottom: 16px; }
+  .process-title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 17px; color: var(--text-primary); margin-bottom: 10px; transition: color 0.3s; }
+  .process-desc { font-size: 13px; line-height: 1.7; color: var(--text-secondary); transition: color 0.3s; }
+
+  /* FOUNDERS */
+  .founders-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  @media (max-width: 768px) { .founders-grid { grid-template-columns: 1fr; } }
+  .founder-visual { position: relative; }
+  .founder-photo-frame { width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, #2c1810 0%, #3d2420 100%); position: relative; overflow: hidden; border-radius: var(--radius); }
+  .founder-badge { position: absolute; bottom: -16px; right: -16px; width: 120px; height: 120px; background: var(--text-primary); display: flex; flex-direction: column; align-items: center; justify-content: center; border: 4px solid var(--bg-primary); }
+  .founder-badge-num { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 900; color: #fff; line-height: 1; }
+  .founder-badge-label { font-family: 'Montserrat', sans-serif; font-size: 8px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5); text-align: center; line-height: 1.3; margin-top: 4px; }
+  .founder-bio { font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 32px; }
+  .founder-credentials { display: flex; flex-direction: column; gap: 12px; }
+  .credential-item { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text-secondary); }
+  .credential-dot { width: 6px; height: 6px; border-radius: 50%; background: #FF8A00; flex-shrink: 0; }
+  .location-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: rgba(47,128,237,0.08); border: 1px solid rgba(47,128,237,0.15); border-radius: var(--radius); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: var(--accent-blue); margin-bottom: 24px; }
+
+  /* TESTIMONIALS */
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+  @media (max-width: 900px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) { .testimonials-grid { grid-template-columns: 1fr; } }
+  .testimonial-card { background: var(--bg-primary); padding: 40px 32px; position: relative; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+  .testimonial-card::before { content: '"'; position: absolute; top: 16px; right: 24px; font-family: Georgia, serif; font-size: 80px; color: rgba(17,17,17,0.04); line-height: 1; font-weight: 900; }
+  .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+  .t-stars { color: #FFC94D; font-size: 14px; letter-spacing: 2px; margin-bottom: 16px; }
+  .t-text { font-size: 14px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 24px; font-style: italic; }
+  .t-author { display: flex; align-items: center; gap: 12px; }
+  .t-avatar { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: #fff; flex-shrink: 0; }
+  .t-name { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; color: var(--text-primary); }
+  .t-location { font-size: 11px; color: var(--text-secondary); }
+  .google-rating-bar { display: flex; align-items: center; gap: 20px; padding: 24px 32px; background: #fff; border: 1px solid rgba(0,0,0,0.06); margin-bottom: 40px; border-radius: var(--radius); box-shadow: var(--shadow-card); flex-wrap: wrap; }
+  .g-score { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 36px; color: var(--text-primary); }
+  .g-stars { color: #FFC94D; font-size: 16px; }
+  .g-count { font-size: 12px; color: var(--text-secondary); }
+  .g-badge { margin-left: auto; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-blue); border: 1px solid rgba(47,128,237,0.2); padding: 6px 12px; border-radius: var(--radius); }
+
+  /* CTA */
+  .cta-section { background: var(--text-primary); padding: 100px 5%; text-align: center; position: relative; overflow: hidden; }
+  .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(255,138,0,0.1) 0%, transparent 60%), radial-gradient(ellipse at 80% 100%, rgba(47,128,237,0.08) 0%, transparent 50%); }
+  .cta-headline { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(32px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.02em; color: #fff; margin-bottom: 16px; position: relative; }
+  .cta-sub { font-size: 16px; color: rgba(255,255,255,0.5); margin-bottom: 48px; position: relative; }
+  .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+  .btn-whatsapp { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 18px 36px; background: #25D366; color: #fff; border: none; border-radius: var(--radius); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; }
+  .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(37,211,102,0.3); filter: brightness(1.1); }
+  .btn-call { font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 18px 36px; background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius); cursor: pointer; display: flex; align-items: center; gap: 10px; text-decoration: none; transition: border-color 0.3s, color 0.3s, transform 0.3s; }
+  .btn-call:hover { border-color: rgba(255,255,255,0.5); color: #fff; transform: translateY(-3px); }
+
+  /* FOOTER */
+  footer { background: #0a0a0a; padding: 60px 5% 32px; }
+  .footer-gradient-bar { height: 2px; background: var(--gradient); margin-bottom: 48px; opacity: 0.4; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+  @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+  .footer-brand-name { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 20px; color: #fff; letter-spacing: 0.06em; margin-bottom: 12px; }
+  .footer-tagline { font-size: 13px; line-height: 1.7; color: rgba(255,255,255,0.3); margin-bottom: 24px; max-width: 260px; }
+  .footer-contact-item { font-size: 13px; color: rgba(255,255,255,0.4); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; text-decoration: none; transition: color 0.3s; }
+  .footer-contact-item:hover { color: rgba(255,255,255,0.8); }
+  .footer-col-title { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 20px; }
+  .footer-link { display: block; font-size: 13px; color: rgba(255,255,255,0.4); text-decoration: none; margin-bottom: 10px; transition: color 0.3s, transform 0.3s; transform: translateX(0); }
+  .footer-link:hover { color: rgba(255,255,255,0.8); transform: translateX(4px); }
+  .footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); }
+
+  /* WHATSAPP FLOAT */
+  .wa-float { position: fixed; bottom: 28px; right: 28px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 24px; box-shadow: 0 8px 32px rgba(37,211,102,0.4); z-index: 800; transition: transform 0.3s, box-shadow 0.3s; animation: waEntry 0.6s 2s var(--transition) both; }
+  .wa-float:hover { transform: scale(1.1) translateY(-2px); box-shadow: 0 16px 40px rgba(37,211,102,0.5); }
+  @keyframes waEntry { from { opacity: 0; transform: scale(0.5) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+  .wa-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid rgba(37,211,102,0.4); animation: waPulse 2s ease infinite; }
+  @keyframes waPulse { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.5); opacity: 0; } }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--transition), transform 0.8s var(--transition); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+
+  <!-- Warm glow orb -->
+  <div class="pl-glow"></div>
+
+  <!-- Architectural lines top / bottom -->
+  <div class="pl-hline" style="top:15%;animation-delay:0.2s;"></div>
+  <div class="pl-hline" style="bottom:15%;animation-delay:0.35s;"></div>
+
+  <!-- Pendant lights dropping from top -->
+  <div class="pl-pendant" style="left:22%;animation-delay:0s;animation-duration:1.1s;"></div>
+  <div class="pl-pendant" style="left:50%;animation-delay:0.12s;animation-duration:1.0s;"></div>
+  <div class="pl-pendant" style="left:78%;animation-delay:0.06s;animation-duration:1.05s;"></div>
+
+  <!-- Centre content -->
+  <div class="pl-inner">
+
+    <!-- Animated ring logo mark -->
+    <div class="pl-mark">
+      <div class="pl-ring"></div>
+      <div class="pl-ring"></div>
+      <div class="pl-ring"></div>
+    </div>
+
+    <!-- Studio wordmark -->
+    <div class="pl-name">DROPLETS</div>
+    <div class="pl-tag">Design Studio &middot; Pune</div>
+
+    <!-- Progress bar with dot -->
+    <div class="pl-bar-wrap">
+      <div class="pl-bar"></div>
+      <div class="pl-bar-dot"></div>
+    </div>
+
+    <!-- Live counter -->
+    <div class="pl-percent" id="pl-percent">0%</div>
+
+  </div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919999999999?text=Hi%2C%20I%20saw%20your%20website%20and%20would%20like%20a%20consultation." class="wa-float" aria-label="Chat on WhatsApp">
+  <div class="wa-pulse"></div>
+  💬
+</a>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">DROPLETS</a>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <!-- ── BACKGROUND ── -->
+  <div class="hero-bg"></div>
+
+  <!-- ── CINEMATIC SCENE ── -->
+  <div class="hero-scene">
+    <!-- Scanning beam -->
+    <div class="scene-beam"></div>
+
+    <!-- Pendant lights with drop animation -->
+    <div class="scene-pendant"></div>
+    <div class="scene-pendant-2"></div>
+    <div class="scene-cone"></div>
+
+    <!-- Room structure -->
+    <div class="scene-wall-glow"></div>
+    <div class="scene-slats"></div>
+    <div class="scene-floor"></div>
+
+    <!-- Structural lines -->
+    <div class="scene-hline" style="top:18%;animation-delay:1.4s;"></div>
+    <div class="scene-hline" style="top:70%;animation-delay:1.7s;opacity:0.5;"></div>
+    <div class="scene-vline" style="left:52%;animation-delay:1.5s;opacity:0.6;"></div>
+    <div class="scene-vline" style="left:80%;animation-delay:1.9s;opacity:0.4;"></div>
+
+    <!-- Ambient orbs -->
+    <div class="scene-orb" style="width:500px;height:400px;background:rgba(180,85,20,0.1);top:-5%;right:15%;--oa:0.6;--dx:12px;--dy:-8px;animation-duration:10s;"></div>
+    <div class="scene-orb" style="width:320px;height:320px;background:rgba(35,70,160,0.07);bottom:5%;left:8%;--oa:0.5;--dx:-8px;--dy:-10px;animation-duration:13s;animation-delay:-4s;"></div>
+    <div class="scene-orb" style="width:260px;height:260px;background:rgba(150,70,15,0.09);top:35%;right:2%;--oa:0.55;--dx:6px;--dy:8px;animation-duration:8s;animation-delay:-2s;"></div>
+  </div>
+
+  <!-- ── HERO LEFT: TEXT ── -->
+  <div class="hero-left">
+    <div class="hero-content">
+
+      <div class="hero-eyebrow">Droplets Design Studio · Pune</div>
+
+      <h1 class="hero-headline">
+        <span class="line"><span class="line-inner">Transforming</span></span>
+        <span class="line"><span class="line-inner">Spaces.</span></span>
+        <span class="line"><span class="line-inner"><span class="grad-word">Elevating</span></span></span>
+        <span class="line"><span class="line-inner">Lifestyles.</span></span>
+      </h1>
+
+      <p class="hero-sub">Premium architecture, interior design & landscaping across Sinhgad Road, Hingne Khurd & Pune. In-house team. Zero compromises.</p>
+
+      <div class="hero-actions">
+        <a href="https://wa.me/919999999999" class="btn-primary">
+          <span>Schedule a Site Visit</span>
+          <span>→</span>
+        </a>
+        <a href="#work" class="btn-secondary">View Our Work</a>
+      </div>
+
+      <div class="hero-chips">
+        <div class="hero-chip">
+          <div class="hero-chip-dot" style="background:#FFC94D;"></div>
+          4.5★ Google Rated
+        </div>
+        <div class="hero-chip">
+          <div class="hero-chip-dot" style="background:#2F80ED;"></div>
+          20+ Projects Done
+        </div>
+        <div class="hero-chip">
+          <div class="hero-chip-dot" style="background:#2DD4BF;"></div>
+          Never Outsourced
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── HERO RIGHT: ANIMATED STUDIO VISUAL ── -->
+  <div class="hero-visual">
+    <div class="hv-frame">
+      <!-- Corner brackets -->
+      <div class="hv-corner"></div>
+      <div class="hv-corner"></div>
+      <div class="hv-corner"></div>
+      <div class="hv-corner"></div>
+
+      <div class="hv-room">
+        <!-- Structure -->
+        <div class="hv-ceiling"></div>
+        <div class="hv-wall-right"></div>
+        <div class="hv-floor"></div>
+
+        <!-- Pendant lights -->
+        <div class="hv-pendant"></div>
+        <div class="hv-pendant-2"></div>
+        <div class="hv-light-cone"></div>
+
+        <!-- Furniture -->
+        <div class="hv-sofa"></div>
+
+        <!-- Scanning render line -->
+        <div class="hv-scan"></div>
+
+        <!-- Blueprint circles -->
+        <div class="hv-circle" style="width:72px;height:72px;top:8%;right:7%;animation-delay:3.2s;animation-duration:22s;"></div>
+        <div class="hv-circle" style="width:44px;height:44px;top:8%;right:7%;margin:14px;animation-delay:3.4s;animation-duration:16s;animation-direction:reverse;"></div>
+
+        <!-- Gradient accent lines -->
+        <div class="hv-accent-line" style="width:38%;top:32%;left:6%;animation-delay:3.0s;"></div>
+        <div class="hv-accent-line" style="width:22%;bottom:34%;right:8%;animation-delay:3.5s;"></div>
+
+        <!-- Floating tags -->
+        <div class="hv-tag" style="top:45%;left:5%;animation-delay:3.3s;animation-duration:5s;">Living Room</div>
+        <div class="hv-tag" style="top:24%;right:5%;animation-delay:3.8s;animation-duration:6.5s;border-color:rgba(255,200,80,0.14);color:rgba(255,200,80,0.45);">Warm Oak Finish</div>
+        <div class="hv-tag" style="bottom:34%;left:7%;animation-delay:4.2s;animation-duration:4.5s;border-color:rgba(47,128,237,0.14);color:rgba(47,128,237,0.45);">3D Verified</div>
+
+        <!-- Dimension markers -->
+        <div class="hv-dim" style="bottom:34%;left:52%;animation-delay:4s;animation-duration:8s;">4.2m × 3.8m</div>
+        <div class="hv-dim" style="top:18%;left:38%;animation-delay:4.5s;animation-duration:9s;">H = 3.0m</div>
+
+        <!-- Depth gradient -->
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 65% 38%,rgba(255,165,50,0.05) 0%,transparent 50%);pointer-events:none;"></div>
+      </div>
+
+      <div class="hv-render-label">Droplets Design Studio · Live 3D Preview</div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator — bottom left -->
+  <div class="scroll-indicator" onclick="document.getElementById('trust').scrollIntoView({behavior:'smooth'})">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+
+</section>
+
+
+<!-- TRUST BAR -->
+<div class="trust-bar" id="trust">
+  <div class="trust-item"><span class="stars">★★★★★</span><span class="trust-val">4.5</span><span>Google Rated</span></div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><span class="trust-val">27+</span><span>Verified Reviews</span></div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><span class="trust-val">20+</span><span>Projects Completed</span></div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><span>Architecture</span><span style="color:rgba(255,255,255,0.2)">·</span><span>Interior</span><span style="color:rgba(255,255,255,0.2)">·</span><span>Landscaping</span></div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <!-- Intro: headline left, description right -->
+  <div class="services-intro">
+    <div>
+      <div class="section-label reveal">Our Expertise</div>
+      <h2 class="section-headline reveal reveal-delay-1">Three Pillars.<br><span style="color:#FF8A00">O</span><span style="color:#FFa030">n</span><span style="color:#FFb845">e</span><span style="color:#FF85a0"> </span><span style="color:#FF4FA3">V</span><span style="color:#b04adc">i</span><span style="color:#8A3FFC">s</span><span style="color:#5a6aF4">i</span><span style="color:#2F80ED">o</span><span style="color:#2DD4BF">n</span><span style="color:#2DD4BF">.</span></h2>
+    </div>
+    <div>
+
+    </div>
+  </div>
+
+  <!-- 3-column service cards — full width -->
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-number">01</div>
+      <span class="service-icon">🏗</span>
+      <div class="service-title">Architecture & Construction</div>
+      <p class="service-desc">Structural planning, blueprint to build execution, material selection and project management for residential and commercial spaces.</p>
+      <div class="service-tags"><span class="tag">Residential</span><span class="tag">Commercial</span><span class="tag">Renovations</span></div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-number">02</div>
+      <span class="service-icon">🛋</span>
+      <div class="service-title">Interior Design</div>
+      <p class="service-desc">3D visualization to physical execution with premium material sourcing, custom furniture, lighting design, and final styling.</p>
+      <div class="service-tags"><span class="tag">3D Renders</span><span class="tag">Custom Furniture</span><span class="tag">Lighting</span></div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-number">03</div>
+      <span class="service-icon">🌿</span>
+      <div class="service-title">Landscaping & Outdoors</div>
+      <p class="service-desc">Garden design, outdoor living areas, terrace planning and hardscaping that extends the luxury of your interiors to the outdoors.</p>
+      <div class="service-tags"><span class="tag">Garden Design</span><span class="tag">Terrace</span><span class="tag">Hardscaping</span></div>
+    </div>
+  </div>
+
+  <!-- Stats row — full width below cards -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:2px" class="reveal reveal-delay-3">
+    <div class="stat-block" style="background:var(--bg-secondary)"><div class="stat-num" data-count="5">0</div><div class="stat-label">Years of Excellence</div></div>
+    <div class="stat-block" style="background:var(--bg-secondary)"><div class="stat-num" data-count="20">0</div><div class="stat-label">Projects Delivered</div></div>
+    <div class="stat-block" style="background:var(--bg-secondary)"><div class="stat-num" data-count="100">0</div><div class="stat-label">% In-House Execution</div></div>
+    <div class="stat-block" style="background:var(--bg-secondary)"><div class="stat-num" data-count="27">0</div><div class="stat-label">Happy Clients</div></div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section-alt" id="work">
+  <div class="section-label reveal">Our Portfolio</div>
+  <h2 class="section-headline reveal reveal-delay-1">Work That<br><span class="grad-text">Speaks For Itself.</span></h2>
+  <p class="section-sub reveal reveal-delay-2">From warm wood-paneled Savitri Nagar residences to sleek Sinhgad Road commercial fit-outs — every project tells a story of meticulous execution.</p>
+  <div class="portfolio-grid reveal">
+
+    <div class="portfolio-item">
+      <div class="room-vis" style="background:linear-gradient(135deg,#2c1810,#5c3420)">
+        <div class="render-scene">
+          <div class="render-floor" style="height:30%;background:rgba(60,30,10,0.8)"></div>
+          <div class="render-ceiling" style="background:rgba(0,0,0,0.5)"></div>
+          <div class="render-window" style="opacity:1;background:linear-gradient(180deg,rgba(255,200,100,0.5),rgba(255,150,50,0.3))"></div>
+          <div class="render-light"></div>
+          <div class="render-sofa" style="background:rgba(200,180,150,0.15);width:60%;left:20%"></div>
+          <div style="position:absolute;left:0;top:0;bottom:30%;width:8px;background:rgba(100,60,20,0.3)"></div>
+          <div style="position:absolute;left:12px;top:0;bottom:30%;width:8px;background:rgba(80,45,15,0.25)"></div>
+          <div style="position:absolute;left:24px;top:0;bottom:30%;width:8px;background:rgba(100,60,20,0.2)"></div>
+        </div>
+      </div>
+      <div class="portfolio-type">Interior</div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-project">Savitri Nagar Residence</div>
+        <div class="portfolio-meta">Pune · 2024 · Interior Design</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="room-vis" style="background:linear-gradient(135deg,#1a1f2e,#2a3550)">
+        <div class="render-scene">
+          <div class="render-floor" style="height:40%;background:rgba(20,30,50,0.8)"></div>
+          <div class="render-light" style="left:30%;background:linear-gradient(180deg,transparent,rgba(100,150,255,0.3))"></div>
+          <div class="render-light" style="left:70%;background:linear-gradient(180deg,transparent,rgba(100,150,255,0.3))"></div>
+        </div>
+      </div>
+      <div class="portfolio-type">Commercial</div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-project">Hingne Khurd Office</div>
+        <div class="portfolio-meta">Pune · 2024 · Commercial Interior</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="room-vis" style="background:linear-gradient(135deg,#0f1f15,#1a3525)">
+        <div class="render-scene">
+          <div style="position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(180deg,rgba(20,60,30,0.6),rgba(10,30,15,0.9))"></div>
+          <div style="position:absolute;bottom:40%;left:15%;width:20px;height:80px;background:rgba(30,80,40,0.6);border-radius:1px"></div>
+          <div style="position:absolute;bottom:40%;left:40%;width:16px;height:100px;background:rgba(25,70,35,0.5);border-radius:1px"></div>
+          <div style="position:absolute;bottom:40%;right:20%;width:18px;height:65px;background:rgba(30,80,40,0.55);border-radius:1px"></div>
+          <div style="position:absolute;bottom:42%;left:10%;width:80px;height:30px;background:rgba(40,100,50,0.3);border-radius:50%"></div>
+          <div style="position:absolute;top:20%;left:50%;transform:translateX(-50%);width:2px;height:120px;background:linear-gradient(180deg,rgba(255,255,200,0.1),transparent)"></div>
+        </div>
+      </div>
+      <div class="portfolio-type">Landscaping</div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-project">Warje Villa Garden</div>
+        <div class="portfolio-meta">Pune · 2023 · Landscaping</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="room-vis" style="background:linear-gradient(135deg,#2a1a30,#3d2040)">
+        <div class="render-scene">
+          <div class="render-floor" style="height:35%;background:rgba(40,20,50,0.8)"></div>
+          <div style="position:absolute;top:15%;left:10%;width:30%;height:60%;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05)"></div>
+          <div class="render-light" style="background:linear-gradient(180deg,transparent,rgba(180,100,255,0.2))"></div>
+        </div>
+      </div>
+      <div class="portfolio-type">Interior</div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-project">Sinhgad Road Apartment</div>
+        <div class="portfolio-meta">Pune · 2024 · Luxury Interior</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="room-vis" style="background:linear-gradient(135deg,#1a2a20,#253a2d)">
+        <div class="render-scene">
+          <div class="render-floor" style="height:30%;background:rgba(20,40,25,0.9)"></div>
+          <div class="render-window" style="top:15%;left:5%;right:auto;width:25%;background:linear-gradient(180deg,rgba(100,200,120,0.2),rgba(50,150,70,0.1))"></div>
+          <div class="render-light" style="background:linear-gradient(180deg,transparent,rgba(100,200,100,0.15))"></div>
+        </div>
+      </div>
+      <div class="portfolio-type">Architecture</div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-project">Katraj Residence</div>
+        <div class="portfolio-meta">Pune · 2023 · Architecture + Interior</div>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <div class="room-vis" style="background:linear-gradient(135deg,#2a2010,#40351a)">
+        <div class="render-scene">
+          <div class="render-floor" style="height:38%;background:rgba(50,35,10,0.9)"></div>
+          <div class="render-window" style="top:10%;right:10%;background:linear-gradient(180deg,rgba(255,220,100,0.4),rgba(255,180,50,0.2))"></div>
+          <div class="render-light" style="background:linear-gradient(180deg,transparent,rgba(255,200,80,0.3))"></div>
+          <div style="position:absolute;bottom:38%;left:5%;width:45%;height:18%;background:rgba(180,150,100,0.1);border-top:1px solid rgba(255,255,255,0.08)"></div>
+        </div>
+      </div>
+      <div class="portfolio-type">Interior</div>
+      <div class="portfolio-overlay">
+        <div class="portfolio-project">Dhayari Bungalow</div>
+        <div class="portfolio-meta">Pune · 2024 · Full Home Design</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div style="text-align:center;margin-bottom:60px">
+    <div class="section-label reveal" style="justify-content:center">How We Work</div>
+    <h2 class="section-headline reveal reveal-delay-1">From Concept<br>to <span class="grad-text">Reality.</span></h2>
+    <p class="section-sub reveal reveal-delay-2" style="margin:0 auto">A transparent, structured process so you always know what's happening with your space and your investment.</p>
+  </div>
+  <div class="process-grid reveal">
+    <div class="process-step">
+      <div class="process-icon">📐</div>
+      <div class="process-title">Discovery & Brief</div>
+      <p class="process-desc">Site visit, requirement gathering, budget discussion. We understand your vision before designing anything.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-icon">🖥</div>
+      <div class="process-title">3D Design & Approval</div>
+      <p class="process-desc">Full photorealistic 3D renders of your space. You approve every detail — materials, colors, furniture — before we break ground.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-icon">🔨</div>
+      <div class="process-title">Execution & Build</div>
+      <p class="process-desc">Our in-house team handles all civil work, carpentry, electrical, and installation. No subcontracting, no quality compromises.</p>
+    </div>
+    <div class="process-step">
+      <div class="process-icon">🏠</div>
+      <div class="process-title">Handover & Styling</div>
+      <p class="process-desc">Final walkthrough, punch-list clearance, professional styling. Your dream space — exactly as rendered.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / FOUNDERS -->
+<section class="section-alt" id="about">
+  <div class="founders-grid">
+    <div class="founder-visual reveal">
+      <div class="founder-photo-frame">
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(255,170,60,0.2) 0%,transparent 60%)"></div>
+        <div style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-size:200px;line-height:1;opacity:0.15;filter:grayscale(1)">👥</div>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.4) 0%,transparent 60%)"></div>
+        <div style="position:absolute;top:32px;left:32px;width:40px;height:1px;background:rgba(255,255,255,0.2)"></div>
+        <div style="position:absolute;top:32px;left:32px;width:1px;height:40px;background:rgba(255,255,255,0.2)"></div>
+        <div style="position:absolute;bottom:80px;right:32px;width:40px;height:1px;background:rgba(255,255,255,0.2)"></div>
+        <div style="position:absolute;bottom:80px;right:32px;width:1px;height:40px;background:rgba(255,255,255,0.2)"></div>
+        <div style="position:absolute;bottom:32px;left:50%;transform:translateX(-50%);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.5)">The Founders</div>
+      </div>
+      <div class="founder-badge">
+        <div class="founder-badge-num">5+</div>
+        <div class="founder-badge-label">Years<br>Together</div>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-2" style="padding:20px 0">
+      <div class="location-badge">📍 Pune, Maharashtra</div>
+      <div class="section-label">The Studio</div>
+      <h2 class="section-headline">People You Can<br>Trust In Your Home.</h2>
+      <p class="founder-bio">Droplets Design Studio was built on a simple belief: your home deserves the same care and craftsmanship that goes into a luxury hotel. Founded by a husband-wife duo with backgrounds in architecture and spatial design, we bring complementary expertise to every project.</p>
+      <p class="founder-bio" style="margin-top:-16px">We personally oversee every site — you're not handing your home over to a salesperson who disappears after signing. We're there from the first sketch to the final switchplate.</p>
+      <div class="founder-credentials">
+        <div class="credential-item"><div class="credential-dot"></div>Qualified Architects & Interior Designers</div>
+        <div class="credential-item"><div class="credential-dot" style="background:#2F80ED"></div>Serving Sinhgad Road, Hingne Khurd & surrounding areas</div>
+        <div class="credential-item"><div class="credential-dot" style="background:#FF4FA3"></div>In-house team — never outsourced</div>
+        <div class="credential-item"><div class="credential-dot" style="background:#8A3FFC"></div>Open 9:30 AM – 9:30 PM, 7 days a week</div>
+        <div class="credential-item"><div class="credential-dot" style="background:#2DD4BF"></div>Transparent pricing, milestone-based payments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="reviews">
+  <div style="margin-bottom:48px">
+    <div class="section-label reveal">Client Stories</div>
+    <h2 class="section-headline reveal reveal-delay-1">27 Families.<br><span class="grad-text">27 Dream Spaces.</span></h2>
+    <div class="google-rating-bar reveal reveal-delay-2">
+      <span style="font-size:24px">🔵</span>
+      <div class="g-score">4.5</div>
+      <div><div class="g-stars">★★★★★</div><div class="g-count">Based on 27 Google Reviews</div></div>
+      <div class="g-badge">Verified Google Business</div>
+    </div>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">The 3D renders they showed us were exactly what we got in reality. Not a single deviation. The wood paneling in the living room is exactly as designed. Highly recommended for anyone serious about quality.</p>
+      <div class="t-author">
+        <div class="t-avatar" style="background:linear-gradient(135deg,#FF8A00,#FFC94D)">PR</div>
+        <div><div class="t-name">Priya Ranade</div><div class="t-location">Savitri Nagar, Pune</div></div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">We were worried about hidden costs — but every rupee was accounted for upfront. They completed our 3BHK interior on time and within budget. The attention to lighting is incredible.</p>
+      <div class="t-author">
+        <div class="t-avatar" style="background:linear-gradient(135deg,#8A3FFC,#2F80ED)">SK</div>
+        <div><div class="t-name">Sandeep & Kavita Joshi</div><div class="t-location">Sinhgad Road, Pune</div></div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="t-stars">★★★★☆</div>
+      <p class="t-text">Transformed our office space beyond recognition. The team was professional and the project manager was always reachable. Our clients comment on the interiors every single day.</p>
+      <div class="t-author">
+        <div class="t-avatar" style="background:linear-gradient(135deg,#2DD4BF,#2F80ED)">AM</div>
+        <div><div class="t-name">Amit Marathe</div><div class="t-location">Hingne Khurd, Pune</div></div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">We hired Droplets for our full home renovation — kitchen, two bedrooms, and the living area. Every single room was delivered exactly as the 3D showed. The custom wardrobe craftsmanship is something else. Worth every rupee.</p>
+      <div class="t-author">
+        <div class="t-avatar" style="background:linear-gradient(135deg,#FF4FA3,#8A3FFC)">ND</div>
+        <div><div class="t-name">Neha & Deepak Kulkarni</div><div class="t-location">Warje, Pune</div></div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">Got our terrace garden and entrance landscaping done. The before and after is night and day. They designed everything to handle Pune's monsoon perfectly — drainage, plant selection, everything thought through. Very professional team.</p>
+      <div class="t-author">
+        <div class="t-avatar" style="background:linear-gradient(135deg,#2DD4BF,#2F80ED)">RS</div>
+        <div><div class="t-name">Rajesh Subramaniam</div><div class="t-location">Dhayari, Pune</div></div>
+      </div>
+    </div>
+
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">What stood out was that the founders were personally present at every milestone. It wasn't just contractors showing up — the designers who made our 3D renders were on site. The result feels like a hotel lobby, not a regular home.</p>
+      <div class="t-author">
+        <div class="t-avatar" style="background:linear-gradient(135deg,#FF8A00,#FF4FA3)">MV</div>
+        <div><div class="t-name">Meera Vaidya</div><div class="t-location">Katraj, Pune</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section" id="contact">
+  <h2 class="cta-headline reveal">Ready to Build<br>Your <span class="grad-text">Dream Space?</span></h2>
+  <p class="cta-sub reveal reveal-delay-1">Free consultation. No obligation. Just a conversation about your vision.</p>
+  <div class="cta-buttons reveal reveal-delay-2">
+    <a href="https://wa.me/919999999999?text=Hi%2C%20I'd%20like%20to%20discuss%20a%20project." class="btn-whatsapp">💬 <span>WhatsApp Us Now</span></a>
+    <a href="tel:+919999999999" class="btn-call">📞 <span>Call for a Free Consult</span></a>
+  </div>
+  <div style="margin-top:48px;display:flex;gap:32px;justify-content:center;flex-wrap:wrap" class="reveal reveal-delay-3">
+    <div style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25)">📍 Sinhgad Road, Pune</div>
+    <div style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25)">🕐 9:30 AM – 9:30 PM Daily</div>
+    <div style="font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.25)">⭐ 4.5 Google Rated</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-gradient-bar"></div>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">DROPLETS</div>
+      <p class="footer-tagline">Architecture · Interior Design · Landscaping. Crafting premium spaces across Pune since 2019.</p>
+      <a href="tel:+919999999999" class="footer-contact-item">📞 +91 99999 99999</a>
+      <a href="https://wa.me/919999999999" class="footer-contact-item">💬 WhatsApp Chat</a>
+      <a href="/cdn-cgi/l/email-protection#761e131a1a1936120419061a1302051213051f1118581f18" class="footer-contact-item">✉ <span class="__cf_email__" data-cfemail="d9b1bcb5b5b699bdabb6a9b5bcadaabdbcaab0beb7f7b0b7">[email&#160;protected]</span></a>
+      <span class="footer-contact-item">📍 Sinhgad Road, Pune 411041</span>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <a href="#services" class="footer-link">Architecture</a>
+      <a href="#services" class="footer-link">Interior Design</a>
+      <a href="#services" class="footer-link">Landscaping</a>
+      <a href="#services" class="footer-link">3D Visualization</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Studio</div>
+      <a href="#work" class="footer-link">Portfolio</a>
+      <a href="#process" class="footer-link">Our Process</a>
+      <a href="#about" class="footer-link">About Us</a>
+      <a href="#reviews" class="footer-link">Reviews</a>
+    </div>
+    <div>
+      <div class="footer-col-title">Areas Served</div>
+      <span class="footer-link">Sinhgad Road</span>
+      <span class="footer-link">Hingne Khurd</span>
+      <span class="footer-link">Savitri Nagar</span>
+      <span class="footer-link">Warje · Katraj</span>
+      <span class="footer-link">Dhayari · Ambegaon</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Droplets Design Studio. All rights reserved.</div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.15)">Pune's Premium Design Studio</div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ── PRELOADER ──
+  const preloader = document.getElementById('preloader');
+  const plPercent = document.getElementById('pl-percent');
+
+  // Animated percentage counter
+  let count = 0;
+  const countTimer = setInterval(() => {
+    count = Math.min(count + Math.floor(Math.random() * 8) + 3, 99);
+    if (plPercent) plPercent.textContent = count + '%';
+    if (count >= 99) clearInterval(countTimer);
+  }, 60);
+
+  function hidePreloader() {
+    clearInterval(countTimer);
+    if (plPercent) plPercent.textContent = '100%';
+
+    setTimeout(() => {
+      preloader.classList.add('hidden');
+      preloader.addEventListener('transitionend', () => {
+        preloader.classList.add('gone');
+        // Trigger hero animations AFTER preloader fully exits
+        document.body.classList.add('hero-ready');
+      }, { once: true });
+    }, 300);
+  }
+
+  // Hide after bar fills (3.2s total: 1.1s delay + 2.2s fill + buffer)
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(hidePreloader, 3400);
+  });
+  // Hard fallback
+  setTimeout(hidePreloader, 5000);
+
+  // NAVBAR SCROLL
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // PARTICLES
+  const heroBg = document.querySelector('.hero-bg');
+  if (heroBg) {
+    for (let i = 0; i < 25; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 2 + 1;
+      p.style.cssText = `left:${Math.random()*100}%;width:${size}px;height:${size}px;background:rgba(255,${Math.floor(Math.random()*80+150)},${Math.floor(Math.random()*40)},${Math.random()*0.3+0.1});animation-duration:${Math.random()*12+8}s;animation-delay:${Math.random()*12}s;`;
+      heroBg.appendChild(p);
+    }
+  }
+
+  // SCROLL REVEAL
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // COUNTER ANIMATION
+  function animateCounter(el, target) {
+    let start = 0;
+    const step = target / (1500 / 16);
+    const timer = setInterval(() => {
+      start = Math.min(start + step, target);
+      el.textContent = Math.floor(start);
+      if (start >= target) { el.textContent = target; clearInterval(timer); }
+    }, 16);
+  }
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !e.target.dataset.counted) {
+        e.target.dataset.counted = 'true';
+        animateCounter(e.target, parseInt(e.target.dataset.count));
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+
+  // SMOOTH SCROLL
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+
+  // PARALLAX HERO
+  const heroBgParallax = document.querySelector('.hero-bg');
+  window.addEventListener('scroll', () => {
+    if (!heroBgParallax) return;
+    const scrollY = window.scrollY;
+    if (scrollY < window.innerHeight) {
+      heroBgParallax.style.transform = `translateY(${scrollY * 0.3}px)`;
+    }
+  }, { passive: true });
+
+</script>
+</body>
+</html>
